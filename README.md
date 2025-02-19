@@ -1,4 +1,5 @@
 **Extent of occurrence, area of occupancy, and rarity rank bulk calculator for NatureServe element ranking**
+
 Created by Clark Hollenberg at the Colorado Natural Heritage Program, October 2024
 
 **Introduction**
@@ -6,9 +7,13 @@ Created by Clark Hollenberg at the Colorado Natural Heritage Program, October 20
 This script imports a .csv file with rows containing multi-species point occurrence data and WGS84 latitude, longitude coordinates. The output is a xlsx file containing extent of occurrence (EOO), area of occupancy with count of 2 x 2km grid cells (AOO), number of hypothetical Element Occurrences (EOs), and calculated rarity rank. This enables multi-species calculations which are not currently possible on GeoCAT. The projection coordinate system matches the .prj file from the EOO toolbox provided by IUCN. Calculated values match those of the toolbox, but may differ from GeoCAT by 1% at larger scales.
 
 **Description of files in folder:**
+
 •	rarity_calculator.ipynb = the script to calculate ranks
+
 •	sample_occurrence_points_to_rank.csv = provided example input dataset of point occurrence data
+
 •	RankingMetricRules.xlsx = spreadsheet with point rules for rank factors
+
 •	Cylindrical Equal Area (world).prj  = spatial projection from EOO IUCN calculator
 
 **Configuring and running the calculator**
@@ -24,8 +29,11 @@ When ranking a binomial species without infraspecific epithet, I clustered any i
 
 **Input data for ranking**
 The input csv should include at least three columns:
+
 •	SNAME – species name
+
 •	decimalLatitude – decimal degrees in WGS84
+
 •	decimalLongitude – decimal degrees in WGS84
 
 You can change the names of these columns, but if you do they must also be modified in the python script.
